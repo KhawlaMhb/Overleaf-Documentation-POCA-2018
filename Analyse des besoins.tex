@@ -1,0 +1,141 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{float}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{4}
+\usepackage{tabularx}
+
+\usepackage{multirow}
+\usepackage{framed}
+\begin{document}
+\begin{center}
+
+ \vspace*{1cm}
+  \LARGE
+  \textbf{Projet POCA\\}
+  \large
+ 
+   \large
+  	\vspace{2cm}
+  \textbf{Université Paris Diderot- Master 2}\\
+  \vspace{1cm}
+  \LARGE
+  \textbf{Thème}\\
+
+  \LARGE
+  \setlength{\fboxsep}{0.5cm}
+  \begin{framed}
+	\textbf{Role play game over internet}
+  \end{framed}
+  \vspace{2cm}
+\begin{table}[H]
+   \setlength{\tabcolsep}{2cm}
+    \large
+	\centering
+	\begin{tabular}{l}
+		\textbf{Réalisé par :}    
+		 \\  \\
+		 -\textbf{ Achachour} Hamza\\
+		- \textbf{ Baghor } Soufiane\\
+	
+	-\textbf{ Douihech } Maha \\
+		-\textbf{ Kebaili} Zohra Kaouter \\
+		-\textbf{ Mouhoubi } Khawla \\
+		
+  
+
+	\end{tabular}
+  \end{table}
+  \vspace{\fill}
+  \large
+  \textbf{Promotion 2018/2019}
+   \end{center}
+\title{\Huge{Analyse des besoins}}
+
+\date{Version 1: 15 octobre 2018}
+\newpage
+
+
+
+
+\section{Description du logiciel}
+\par Le logiciel à réaliser dans ce projet est une plateforme permettant de créer et participer à des jeux de rôle en ligne où le maître du jeu et les personnages joueurs communiquent via un chat.
+
+\section{Requis fonctionnels}
+Un requis fonctionnel exprime comment est le
+système du point de vue utilisateur. Nous rappelons que notre projet est destiné principalement à être utilisé par des joueurs en rôle. Nous recensons donc ce qui suit les Requis fonctionnels de notre système que nous avons séparé en 3 modules :
+\begin{itemize}
+	\item Connexion \& Inscription
+	\item Jeux de rôle. 
+	\item Actions. 
+
+\end{itemize}
+Ces requis sont prioritisés comme suit:\\
+\begin{center}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{ll}
+			\textbf{Priorité} & \textbf{Description}                                               \\
+			M (Must have)   & \begin{tabular}[c]{@{}l@{}}Spécification obligatoire et fondamentale.
+			\end{tabular}          \\
+			S (Should have)  & \begin{tabular}[c]{@{}l@{}}Spécification importante mais non fondamentale.\end{tabular} \\
+			C (Could have)  & Spécification optionnelle mais non fondamentale.                           
+			\\
+			W (Want to have) & \begin{tabular}[c]{@{}l@{}}Spécification non importante.\end{tabular}
+		\end{tabular}\\
+		\caption{Priorités de spécifications Méthode MoSCoW.}
+		\label{moscow}
+	\end{table}
+\end{center}
+L'effort est mis en nombre de jours nécessaires de réalisation.
+\begin{table}[H]
+	\centering
+	
+	\begin{tabular}{|l|l|p{8cm}|l|l|}
+		\hline
+		ID &Module& Requis&Priorité& Effort \\ 
+		\hline
+		US1 & \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Connexion \\ \& Inscription\end{tabular}} &S'inscrire pour utiliser les fonctionnalités offertes par la plateforme.& M & 5 \\ \cline{1-1} \cline{3-4} \cline{4-5}
+		US2 &  &L'utilisateur inscrit peut se connecter à une session. & M&5 \\ \cline{1-1} \cline{3-4} \cline{4-5}
+		US3 &  & Rejeter un joueur qui rejoint si la capacité du jeu est dépassée. & M&5 \\\hline 
+	
+		US4 & \multirow {3}{*} {Jeux de rôle }&Créer un nouveau jeu de rôle en spécifiant son nom, son scénario et ses personnages.  & M&5\\\cline{1-1} \cline{3-4} \cline{4-5}
+		
+		US5 &  & Un joueur personnage peut rejoindre un jeu existant. & M &5\\ \cline{1-1} \cline{3-4} \cline{4-5}
+		US6 &  & Le maitre du jeu peut créer une ou plusieurs fiches personnages. & M &5\\ \hline
+		US7 & \multirow{7}{*}{ Actions} & Un joueur personnage peut envoyer un message. & M&5 \\ \cline{1-1} \cline{3-4} \cline{4-5}
+		US8 &  &Un joueur personnage peut envoyer un message privé à un joueur en particulier. & M &5\\ \cline{1-1} \cline{3-4} \cline{4-5}
+		US9 &  &Un joueur personnage peut envoyer un fichier(sonore ou image). & M &5\\ \cline{1-1} \cline{3-4} \cline{4-5}
+		US10 &  &  Un joueur personnage peut écrire une commande sur le chat qui simulera un lancer de dé. & M&5 \\\cline{1-1} \cline{3-4} \cline{4-5}
+		US11 &  & Le maitre du jeu peut répondre à une action manuellement. & M &5\\ \cline{1-1} \cline{3-4} \cline{4-5}
+		US12 &  & Le maitre du jeu peut répondre à une action automatiquement. & M &5\\ \cline{1-1} \cline{3-4} \cline{4-5}
+		
+		US13 &  &Le maitre du jeu peut ajouter une réponse à la liste des réponses automatiques. & M&5 \\ \hline
+
+	\end{tabular}
+	\caption{Les spécifications fonctionnelles de la plateforme}
+	\label{specifFonct}
+\end{table}
+\section{Requis non focntionnels}
+Un requis non focntionnels exprime comment est le
+système d’un point de vue interne (technique,
+technologie,…etc.). A présent, nous recensons les spécifications techniques de notre plateforme dans le tableau ci-dessous:
+    \begin{table}[H]
+	\centering
+
+	\label{specifnonFonct}
+	\begin{tabular}{|l | p{14.5cm}| }
+		\hline	ID & Requis      \\\hline           
+		US2	&Les JDR créés doivent supporter plusieurs centaines de joueurs. \\ \hline
+		US3	&Le logiciel devra utiliser un client IRC pour les chats. \\ \hline
+		
+	\end{tabular}
+		\caption{Requis non focntionnels}
+\end{table}
+  %  \nocite{*}
+  %  \bibliographystyle{apalike} 
+	%\renewcommand\bibname{Bibliographie}
+%	\bibliography{references}
+\end{document}
